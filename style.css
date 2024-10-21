@@ -1,10 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #e0e7ff; /* Background color */
+    background: linear-gradient(to bottom, #000000, #ffffff); /* Gradasi hitam ke putih */
+    margin: 0; /* Remove default margin */
 }
 
 .container {
@@ -15,13 +16,67 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 400px;
+    transition: transform 0.3s; /* Smooth scaling on hover */
 }
 
-/* TODO: Add styles for labels, inputs, buttons, and output text */
+.container:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
 h1 {
     font-size: 2.2em;
     margin-bottom: 20px;
     color: #4a4a4a; /* Header color */
 }
 
-/* Add more styles here as needed */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333; /* Label color */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s; /* Smooth border color transition */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus {
+    border-color: #4a90e2; /* Focused border color */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4a90e2; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+button:hover {
+    background-color: #357ab8; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.output {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333; /* Output text color */
+    background-color: #f9f9f9; /* Background color for output */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
